@@ -1,0 +1,10 @@
+n = int(input())
+
+
+def answer(n,num=[1]):
+    for i in range(n):
+        for e in range(len(num)-1):
+            num[e] = num[e] + num[e+1]
+        num.insert(0,1)
+    return num
+print(answer(n))
